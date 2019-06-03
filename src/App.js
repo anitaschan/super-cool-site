@@ -1,8 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
-import Heading from "./Heading//Heading";
-import NavBar from "./NavBar/NavBar";
-
+import Heading from "./HomePage/Heading/Heading";
+import NavBar from "./HomePage/NavBar/NavBar";
 
 class App extends React.Component {
   render() {

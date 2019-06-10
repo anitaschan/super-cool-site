@@ -2,22 +2,24 @@ import React from "react";
 import "./Skills.scss";
 
 const icons = [
-  "icons devicon-github-plain",
-  "icons devicon-html5-plain",
-  "icons devicon-javascript-plain",
-  "icons devicon-react-original",
-  "icons devicon-webpack-plain",
-  "icons devicon-css3-plain",
-  "icons devicon-gitlab-plain",
-  "icons devicon-sass-original"
+  "devicon-github-plain",
+  "devicon-html5-plain",
+  "devicon-javascript-plain",
+  "devicon-react-original",
+  "devicon-webpack-plain",
+  "devicon-css3-plain",
+  "devicon-gitlab-plain",
+  "devicon-sass-original"
 ];
 
 const Skills = () => {
   return (
-    <div className="skills">
-      {icons.map(icon => (
-        <div key={icon} className={icon} />
-      ))}
+    <div className="wrapper">
+      <div className="skills">
+        {icons.map(icon => (
+          <div key={icon} className={"icons " +icon} />
+        ))}
+      </div>
     </div>
   );
 };

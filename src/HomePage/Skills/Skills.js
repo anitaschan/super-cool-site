@@ -14,11 +14,13 @@ const icons = [
 
 const Skills = () => {
   return (
-    <div className="wrapper">
-      <div className="skills">
-        {icons.map(icon => (
-          <div key={icon} className={"icons " +icon} />
-        ))}
+    <div className="skills-section">
+      <div className="wrapper">
+        <div className="skills">
+          {icons.map(icon => (
+            <div key={icon} className={"icons " + icon} />
+          ))}
+        </div>
       </div>
     </div>
   );

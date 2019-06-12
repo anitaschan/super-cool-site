@@ -1,16 +1,21 @@
 import React from "react";
 import { render } from "react-dom";
-import Heading from "./HomePage/Heading/Heading";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import AboutMe from "./AboutMe/AboutMe";
 import NavBar from "./HomePage/NavBar/NavBar";
-import Skills from "./HomePage/Skills/Skills";
+import HomePage from "./HomePage/HomePage";
 
 class App extends React.Component {
   render() {
     return (
       <div>
         <NavBar />
-        <Heading />
-        <Skills />
+        <Router>
+          <Switch>
+            <Route path="/" exact component={HomePage} />
+            <Route exact strict path="/about" component={AboutMe} />
+          </Switch>
+        </Router>
       </div>
     );
   }

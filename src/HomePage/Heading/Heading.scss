@@ -1,11 +1,16 @@
-.heading {
-  font-family: 'Questrial', 'Lato';
-  text-align: center;
-  font-weight: 300;
-  font-size: 70px;
+.header {
   display: flex;
   align-items: center;
-}
-.wrapper{
   min-height: 100vh;
+  background-image: url("../../../assets/bg1.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+
+  .heading {
+    font-family: "Questrial", "Lato";
+    text-align: center;
+    font-weight: 300;
+    font-size: 60px;
+  }
 }

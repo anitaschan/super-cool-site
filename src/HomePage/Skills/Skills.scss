@@ -1,23 +1,29 @@
-.skills {
-  display: flex;
-  justify-content: space-around;
-  flex-flow: wrap;
-  max-width: 550px;
-  align-content: center
-}
-
-.icons {
-  font-size: 100px;
-  color: #ff4040;
-}
-
-.wrapper {
-  display: flex;
-  justify-content: center;
-  height: 350px;
-}
-
 .skills-section {
   background: rgb(219, 217, 217);
   min-height: 100vh;
+  
+
+  .skills {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+    max-width: 800px;
+    align-content: center;
+  }
+
+  .icons {
+    font-size: 100px;
+    color: #c56565;
+    padding: 30px;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    height: 350px;
+  }
+
+  .skills-intro {
+    font-family: "Roboto";
+  }
 }

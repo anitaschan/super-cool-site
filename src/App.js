@@ -8,15 +8,13 @@ import HomePage from "./HomePage/HomePage";
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <Router>
         <NavBar />
-        <Router>
-          <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route exact strict path="/about" component={AboutMe} />
-          </Switch>
-        </Router>
-      </div>
+        <Switch>
+          <Route exact strict path="/" component={HomePage} />
+          <Route path="/about" component={AboutMe} />
+        </Switch>
+      </Router>
     );
   }
 }

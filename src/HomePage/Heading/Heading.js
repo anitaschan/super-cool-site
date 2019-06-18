@@ -3,11 +3,9 @@ import "./Heading.scss";
 
 const Heading = () => {
   return (
-    <div className="header">
-      <h1 className="heading">
-        Hello World, I'm Anita <br />
-        💻
-      </h1>
+    <div className="main-section">
+      <h1 className="main-section__header">&lt; Hello World, I'm Anita /> </h1>
+      <p className="main-section__icon">💻</p>
     </div>
   );
 };

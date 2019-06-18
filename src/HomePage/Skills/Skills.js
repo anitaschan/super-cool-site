@@ -16,14 +16,14 @@ const icons = [
 const Skills = () => {
   return (
     <div className="skills-section">
-      <div className="wrapper">
-        <div className="skills-intro">
-          <h1>Some languages, tools and software I like:</h1>
-          <div className="skills">
-            {icons.map(icon => (
-              <div key={icon} className={"icons " + icon} />
-            ))}
-          </div>
+      <div className="skills">
+        <h1 className="skills__header">
+          Some languages, tools and software I like:
+        </h1>
+        <div className="skills__icons">
+          {icons.map(icon => (
+            <div key={icon} className={"icon " + icon} />
+          ))}
         </div>
       </div>
     </div>

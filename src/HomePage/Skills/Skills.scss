@@ -1,29 +1,42 @@
 .skills-section {
   background: rgb(219, 217, 217);
   min-height: 100vh;
-  
+  display: flex;
+  align-content: center;
 
   .skills {
     display: flex;
     justify-content: space-around;
     flex-flow: wrap;
-    max-width: 800px;
+    width: 100%;
     align-content: center;
+
+    &__icons {
+      display: flex;
+      flex-wrap: wrap;
+      width: 800px;
+      justify-content: space-around;
+    }
+
+    &__header {
+      font-family: "Questrial";
+      width: 100%;
+      text-align: center;
+    }
   }
 
-  .icons {
+  .icon {
     font-size: 100px;
-    color: #c56565;
+    // color: #c56565;
+    color: #4e4e4e;
     padding: 30px;
   }
 
-  .wrapper {
-    display: flex;
-    justify-content: center;
-    height: 350px;
-  }
+  // .wrapper {
+  //   display: flex;
+  //   justify-content: center;
+  //   height: 350px;
 
-  .skills-intro {
-    font-family: "Roboto";
-  }
+  //   border: 1px solid red;
+  // }
 }

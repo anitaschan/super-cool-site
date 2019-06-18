@@ -1,0 +1,26 @@
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  min-height: 100vh;
+  background-color: rgb(158, 158, 168);
+
+  &__header {
+    font-family: "Questrial";
+    font-size: 40px;
+    width: 100%;
+    padding-left: 50px;
+  }
+
+  &__paragraph {
+    text-align: center;
+    font-family: "Lato";
+    font-size: 20px;
+    line-height: 2;
+    width: 100%;
+  }
+
+  p {
+    padding: 0 50px 0 50px;
+  }
+}

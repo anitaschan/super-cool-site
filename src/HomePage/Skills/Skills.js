@@ -9,16 +9,22 @@ const icons = [
   "devicon-webpack-plain",
   "devicon-css3-plain",
   "devicon-gitlab-plain",
-  "devicon-sass-original"
+  "devicon-sass-original",
+  "devicon-visualstudio-plain"
 ];
 
 const Skills = () => {
   return (
-    <div className="wrapper">
+    <div className="skills-section">
       <div className="skills">
-        {icons.map(icon => (
-          <div key={icon} className={"icons " +icon} />
-        ))}
+        <h1 className="skills__header">
+          Some languages, tools and software I like:
+        </h1>
+        <div className="skills__icons">
+          {icons.map(icon => (
+            <div key={icon} className={"icon " + icon} />
+          ))}
+        </div>
       </div>
     </div>
   );

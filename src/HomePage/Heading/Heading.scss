@@ -1,4 +1,5 @@
 @import "../../styles/typography.scss";
+@import "../../styles/layout";
 
 .main-section {
   display: flex;
@@ -18,7 +19,7 @@
     font-size: 60px;
     width: 100%;
     margin: 0px;
-    @media (max-width: 768px) {
+    @media (max-width: $mobile-screen) {
       font-size: 50px;
     }
   }
@@ -28,7 +29,7 @@
     width: 100%;
     text-align: center;
     margin: 0px;
-    @media (max-width: 768px) {
+    @media (max-width: $mobile-screen) {
       font-size: 50px;
     }
   }

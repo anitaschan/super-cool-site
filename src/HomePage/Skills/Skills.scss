@@ -1,4 +1,5 @@
 @import "../../styles/typography.scss";
+@import "../../styles/layout";
 
 .skills-section {
   // background: rgb(219, 217, 217);
@@ -23,7 +24,7 @@
     &__header {
       font-family: $base-font-family;
       text-align: center;
-      @media (max-width: 768px) {
+      @media (max-width: $mobile-screen) {
         font-size: 20px;
       }
     }

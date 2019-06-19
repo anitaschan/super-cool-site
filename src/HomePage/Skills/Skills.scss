@@ -1,7 +1,7 @@
 @import "../../styles/typography.scss";
 
 .skills-section {
-  background: rgb(219, 217, 217);
+  // background: rgb(219, 217, 217);
   height: 100vh;
   display: flex;
   align-content: center;
@@ -17,6 +17,7 @@
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
+      margin: 0 5% 0 5%;
     }
 
     &__header {
@@ -30,7 +31,6 @@
 
   .icon {
     font-size: 100px;
-    // color: #c56565;
     color: #4e4e4e;
     padding: 30px;
     @media (max-width: 800px) {

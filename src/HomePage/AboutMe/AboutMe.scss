@@ -5,24 +5,23 @@
   flex-wrap: wrap;
   align-content: center;
   height: 100vh;
-  background-color: rgb(158, 158, 168);
+  background-color: rgb(210, 210, 216);
 
   &__header {
     font-family: $base-font-family;
     font-size: 40px;
-    padding-left: 50px;
+    padding-left: 5%;
     @media (max-width: 768px) {
       font-size: 20px;
     }
   }
 
   &__paragraph {
-    text-align: center;
+    text-align: justify;
     font-family: "Lato";
     font-size: 20px;
     line-height: 2;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 0 5% 0 5%;
     @media (max-width: 768px) {
       font-size: 16px;
     }

@@ -1,0 +1,30 @@
+@import "../../styles/typography.scss";
+@import "../../styles/layout";
+
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 100vh;
+  background-color: rgb(210, 210, 216);
+
+  &__header {
+    font-family: $base-font-family;
+    font-size: 40px;
+    padding-left: 5%;
+    @media (max-width: $mobile-screen) {
+      font-size: 20px;
+    }
+  }
+
+  &__paragraph {
+    text-align: justify;
+    font-family: "Lato";
+    font-size: 20px;
+    line-height: 2;
+    margin: 0 5% 0 5%;
+    @media (max-width: $mobile-screen) {
+      font-size: 16px;
+    }
+  }
+}

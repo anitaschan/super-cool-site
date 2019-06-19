@@ -1,42 +1,42 @@
+@import "../../styles/typography.scss";
+@import "../../styles/layout";
+
 .skills-section {
-  background: rgb(219, 217, 217);
-  min-height: 100vh;
+  // background: rgb(219, 217, 217);
+  height: 100vh;
   display: flex;
   align-content: center;
 
   .skills {
     display: flex;
     justify-content: space-around;
-    flex-flow: wrap;
-    width: 100%;
     align-content: center;
+    flex-wrap: wrap;
+    width: 100%;
 
     &__icons {
       display: flex;
-      flex-wrap: wrap;
-      width: 800px;
       justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 0 5% 0 5%;
     }
 
     &__header {
-      font-family: "Questrial";
-      width: 100%;
+      font-family: $base-font-family;
       text-align: center;
+      @media (max-width: $mobile-screen) {
+        font-size: 20px;
+      }
     }
   }
 
   .icon {
     font-size: 100px;
-    // color: #c56565;
     color: #4e4e4e;
     padding: 30px;
+    @media (max-width: 800px) {
+      font-size: 60px;
+      padding: 10px;
+    }
   }
-
-  // .wrapper {
-  //   display: flex;
-  //   justify-content: center;
-  //   height: 350px;
-
-  //   border: 1px solid red;
-  // }
 }

@@ -1,3 +1,5 @@
+@import "../../styles/typography.scss";
+
 .Logo {
   background-image: url(../../../assets/Logo.svg);
   height: 50px;
@@ -17,7 +19,7 @@ ul {
   li {
     padding: 0 20px 0 20px;
     display: inline;
-    font-family: "Lato";
+    font-family: $title-font-family;
     font-weight: 300;
     font-size: 16px;
 

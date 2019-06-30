@@ -3,28 +3,63 @@
 .contact-section {
   height: 100vh;
 
+  &__border {
+    border: none;
+    padding: 2% 0;
+    background: rgb(229, 226, 226);
+  }
   &__title {
     font-family: $base-font-family;
-    margin-left: 5%;
+    margin: 0 5%;
+    margin-bottom: 10px;
   }
 
   &__form {
-    margin: 0 5% 0 5%;
+    margin: 0 5%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__submit {
+    background-color: rgb(238, 59, 74);
+    border-radius: 5px;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    width: 120px;
+    height: 30px;
+    margin-top: 10px;
   }
 }
 
-input[type="text"] {
-  width: 100%;
+input[type="text"],
+input[type="email"],
+.contact-section__message {
+  width: 50%;
   height: 5%;
   padding: 12px 20px;
   margin: 1% 0;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+
+  // &:valid {
+  //   background-image: url(../../assets/success.png);
+  //   background-size: 20px;
+  //   background-repeat: no-repeat;
+  //   background-position: 20px 20px;
+  // }
 }
 
 input::placeholder {
   font-family: $title-font-family;
-  font-size: 16px;
+  font-size: 14px;
+  color: rgb(131, 130, 130);
 }
 
 input::after {
   padding-bottom: 10px;
 }
+

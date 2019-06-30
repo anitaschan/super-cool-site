@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div className="NavBar">
+    <nav className="navbar">
       <div className="Logo" />
       <ul>
         <li>
@@ -17,7 +17,7 @@ const NavBar = () => {
           <Link to="/contact">Contact Me</Link>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 

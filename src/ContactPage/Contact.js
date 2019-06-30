@@ -53,7 +53,6 @@ class Contact extends React.Component {
       this.state.email.length > 0 &&
       this.state.subject.length > 0 &&
       this.state.message.length > 0;
-
     const { name, email, subject, message } = this.state.errors;
     const hasErrors =
       name.length > 0 ||

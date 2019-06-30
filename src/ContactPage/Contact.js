@@ -45,13 +45,22 @@ class Contact extends React.Component {
     }
 
     this.setState({ errors, [name]: value });
-
-    // console.log(this.state);
   };
 
-  hasErrors = () => {
+  canBeSubmitted = () => {
+    const filledIn =
+      this.state.name.length > 0 &&
+      this.state.email.length > 0 &&
+      this.state.subject.length > 0 &&
+      this.state.message.length > 0;
+
     const { name, email, subject, message } = this.state.errors;
-    return name.length > 0 && email.length > 0 && subject > 0 && message > 0;
+    const hasErrors =
+      name.length > 0 ||
+      email.length > 0 ||
+      subject.length > 0 ||
+      message.length > 0;
+    return filledIn && !hasErrors;
   };
 
   handleSubmit = event => {
@@ -60,7 +69,7 @@ class Contact extends React.Component {
   };
 
   render() {
-    let hasErrors = this.hasErrors();
+    let canBeSubmitted = this.canBeSubmitted();
     return (
       <div className="contact-section">
         <div className="contact-section__border">
@@ -102,7 +111,7 @@ class Contact extends React.Component {
             />
             <div>{this.state.errors.message}</div>
             <input
-              disabled={hasErrors}
+              disabled={!canBeSubmitted}
               type="submit"
               className="contact-section__submit"
               value="Submit"

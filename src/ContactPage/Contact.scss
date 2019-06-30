@@ -31,6 +31,10 @@
     width: 120px;
     height: 30px;
     margin-top: 10px;
+
+    &:disabled {
+      background-color: grey;
+    }
   }
 }
 
@@ -62,4 +66,3 @@ input::placeholder {
 input::after {
   padding-bottom: 10px;
 }
-

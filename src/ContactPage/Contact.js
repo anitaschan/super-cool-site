@@ -6,13 +6,15 @@ class Contact extends React.Component {
     super(props);
 
     this.state = {
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
+      form: {
+        fullName: "",
+        _replyto: "",
+        subject: "",
+        message: ""
+      },
       errors: {
-        name: "",
-        email: "",
+        fullName: "",
+        _replyto: "",
         subject: "",
         message: ""
       }
@@ -29,91 +31,109 @@ class Contact extends React.Component {
     let errors = this.state.errors;
 
     switch (name) {
-      case "name":
-        errors.name = value.length < 5 ? "Please enter your full name!" : "";
+      case "fullName":
+        errors.fullName = value.length < 5 ? "Please enter your full name" : "";
         break;
-      case "email":
-        errors.email = validEmailRegex.test(value) ? "" : "Email is not valid!";
+      case "_replyto":
+        errors._replyto = validEmailRegex.test(value)
+          ? ""
+          : "Email is not valid";
         break;
       case "subject":
-        errors.subject = value.length < 3 ? "Please enter a subject!" : "";
+        errors.subject = value.length < 3 ? "Please enter a subject" : "";
         break;
       case "message":
         errors.message = value.length < 5 ? "Please enter a message" : "";
       default:
         break;
     }
-
-    this.setState({ errors, [name]: value });
+    let form = { ...this.state.form };
+    form[event.target.name] = event.target.value;
+    this.setState({ form: form });
   };
 
-  canBeSubmitted = () => {
-    const filledIn =
-      this.state.name.length > 0 &&
-      this.state.email.length > 0 &&
-      this.state.subject.length > 0 &&
-      this.state.message.length > 0;
-    const { name, email, subject, message } = this.state.errors;
-    const hasErrors =
-      name.length > 0 ||
-      email.length > 0 ||
-      subject.length > 0 ||
-      message.length > 0;
-    return filledIn && !hasErrors;
+  formCanBeSubmitted = () => {
+    const errors = Object.values(this.state.errors);
+    const form = Object.values(this.state.form);
+
+    function isFilledIn(element) {
+      return element.length > 0;
+    }
+
+    function noErrors(element) {
+      return element === "";
+    }
+
+    let filledIn = form.every(isFilledIn);
+    let hasNoErrors = errors.every(noErrors);
+
+    return filledIn & hasNoErrors;
   };
 
   handleSubmit = event => {
-    alert("submitted");
     event.preventDefault();
   };
 
   render() {
-    let canBeSubmitted = this.canBeSubmitted();
+    const formCanBeSubmitted = this.formCanBeSubmitted();
     return (
       <div className="contact-section">
         <div className="contact-section__border">
           <h1 className="contact-section__title">Get in touch!</h1>
           <form
+            action="https://formspree.io/hello@anitachan.dev"
+            method="POST"
             className="contact-section__form"
-            method="post"
-            action="mailto:hello@anitachan.dev"
-            onSubmit={this.handleSubmit}
           >
             <input
+              className="contact-section_field"
               type="text"
-              name="name"
+              name="fullName"
               placeholder="Name"
               maxLength="20"
+              autoComplete="off"
               onChange={this.handleChange}
             />
-            <div>{this.state.errors.name}</div>
+            <div className="contact-section_field_error">
+              {this.state.errors.fullName}
+            </div>
             <input
+              className="contact-section_field"
               type="email"
-              name="email"
+              name="_replyto"
               placeholder="Email"
-              maxLength="20"
+              autoComplete="off"
               onChange={this.handleChange}
             />
-            <div>{this.state.errors.email}</div>
+            <div className="contact-section_field_error">
+              {this.state.errors._replyto}
+            </div>
             <input
+              className="contact-section_field"
               type="text"
               name="subject"
               placeholder="Subject"
+              autoComplete="off"
               onChange={this.handleChange}
             />
-            <div>{this.state.errors.subject}</div>
+            <div className="contact-section_field_error">
+              {this.state.errors.subject}
+            </div>
             <textarea
-              className="contact-section__message"
+              className="contact-section_field"
               placeholder="Message"
               name="message"
+              autoComplete="off"
               onChange={this.handleChange}
             />
-            <div>{this.state.errors.message}</div>
+            <div className="contact-section_field_error">
+              {this.state.errors.message}
+            </div>
             <input
-              disabled={!canBeSubmitted}
               type="submit"
+              value="Send"
+              disabled={!formCanBeSubmitted}
               className="contact-section__submit"
-              value="Submit"
             />
           </form>
         </div>

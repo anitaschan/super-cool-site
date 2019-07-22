@@ -10,22 +10,28 @@
 }
 
 .navbar {
-  margin: 10px;
+  margin: 5px auto;
   display: flex;
-  justify-content: space-between;
-}
+  flex-direction: row;
+  font-family: $title-font-family;
+  font-size: 16px;
+  width: 500px;
+  justify-content: space-around;
 
-ul {
-  li {
-    padding: 0 20px 0 20px;
-    display: inline;
-    font-family: $title-font-family;
-    font-weight: 300;
-    font-size: 16px;
+  @media (max-width: 500px) {
+    width: 450px;
+  }
 
-    a {
-      text-decoration: none;
-      color: black;
+  &__link {
+    text-decoration: none;
+    color: black;
+    line-height: 50px;
+    padding: 0 10px;
+
+    &:hover {
+      background: rgb(228, 74, 47);
+      border-radius: 5%;
+      color: white;
     }
   }
 }

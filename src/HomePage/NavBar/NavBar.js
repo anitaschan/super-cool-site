@@ -11,9 +11,7 @@ const NavBar = () => {
       <Link to="/portfolio" className="navbar__link">
         Portfolio
       </Link>
-      <div>
-        <a href="/" className="Logo" />
-      </div>
+        <a href="/" className="navbar__logo" />
       <Link to="/blog" className="navbar__link">
         Blog
       </Link>

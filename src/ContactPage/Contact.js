@@ -55,8 +55,7 @@ class Contact extends React.Component {
         [event.target.name]: event.target.value
       },
       errors: {
-        ...errors,
-        errors
+        ...errors
       }
     });
   };
@@ -75,10 +74,8 @@ class Contact extends React.Component {
 
     let filledIn = form.every(isFilledIn);
     let hasNoErrors = errors.every(noErrors);
-    console.log("hasnoerros", errors);
-    console.log("error object", errors);
 
-    // return filledIn & hasNoErrors;
+    return filledIn & hasNoErrors;
   };
 
   handleSubmit = event => {

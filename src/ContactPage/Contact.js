@@ -28,7 +28,8 @@ class Contact extends React.Component {
     );
 
     const { name, value } = event.target;
-    let errors = this.state.errors;
+    let errors = { ...this.state.errors };
+    let form = { ...this.state.form };
 
     switch (name) {
       case "fullName":
@@ -47,9 +48,17 @@ class Contact extends React.Component {
       default:
         break;
     }
-    let form = { ...this.state.form };
-    form[event.target.name] = event.target.value;
-    this.setState({ form: form });
+
+    this.setState({
+      form: {
+        ...form,
+        [event.target.name]: event.target.value
+      },
+      errors: {
+        ...errors,
+        errors
+      }
+    });
   };
 
   formCanBeSubmitted = () => {
@@ -66,8 +75,10 @@ class Contact extends React.Component {
 
     let filledIn = form.every(isFilledIn);
     let hasNoErrors = errors.every(noErrors);
+    console.log("hasnoerros", errors);
+    console.log("error object", errors);
 
-    return filledIn & hasNoErrors;
+    // return filledIn & hasNoErrors;
   };
 
   handleSubmit = event => {
@@ -92,6 +103,7 @@ class Contact extends React.Component {
               placeholder="Name"
               maxLength="20"
               autoComplete="off"
+              value={this.state.form.fullName}
               onChange={this.handleChange}
             />
             <div className="contact-section_field_error">
@@ -103,6 +115,7 @@ class Contact extends React.Component {
               name="_replyto"
               placeholder="Email"
               autoComplete="off"
+              value={this.state.form._replyto}
               onChange={this.handleChange}
             />
             <div className="contact-section_field_error">
@@ -113,6 +126,7 @@ class Contact extends React.Component {
               type="text"
               name="subject"
               placeholder="Subject"
+              value={this.state.form.subject}
               autoComplete="off"
               onChange={this.handleChange}
             />
@@ -124,6 +138,7 @@ class Contact extends React.Component {
               placeholder="Message"
               name="message"
               autoComplete="off"
+              value={this.state.form.message}
               onChange={this.handleChange}
             />
             <div className="contact-section_field_error">

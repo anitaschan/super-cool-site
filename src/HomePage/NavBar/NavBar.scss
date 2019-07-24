@@ -9,10 +9,6 @@
   width: 500px;
   justify-content: space-around;
 
-  @media (max-width: 500px) {
-    width: 450px;
-  }
-
   &__logo {
     background-image: url(../../../assets/Logo.svg);
     height: 50px;

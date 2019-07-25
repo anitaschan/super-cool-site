@@ -84,6 +84,7 @@ class Contact extends React.Component {
 
   render() {
     const formCanBeSubmitted = this.formCanBeSubmitted();
+    const { fullName, _replyto, subject, message } = this.state.form;
     return (
       <div className="contact-section">
         <div className="contact-section__border">
@@ -100,7 +101,7 @@ class Contact extends React.Component {
               placeholder="Name"
               maxLength="20"
               autoComplete="off"
-              value={this.state.form.fullName}
+              value={fullName}
               onChange={this.handleChange}
             />
             <div className="contact-section_field_error">
@@ -112,7 +113,7 @@ class Contact extends React.Component {
               name="_replyto"
               placeholder="Email"
               autoComplete="off"
-              value={this.state.form._replyto}
+              value={_replyto}
               onChange={this.handleChange}
             />
             <div className="contact-section_field_error">
@@ -123,7 +124,7 @@ class Contact extends React.Component {
               type="text"
               name="subject"
               placeholder="Subject"
-              value={this.state.form.subject}
+              value={subject}
               autoComplete="off"
               onChange={this.handleChange}
             />
@@ -135,7 +136,7 @@ class Contact extends React.Component {
               placeholder="Message"
               name="message"
               autoComplete="off"
-              value={this.state.form.message}
+              value={message}
               onChange={this.handleChange}
             />
             <div className="contact-section_field_error">

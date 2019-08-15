@@ -2,27 +2,33 @@
 @import "../styles/layout";
 
 .contact-section {
+  background-image: url(../../assets/letters.jpg);
+  
+  
+  height:calc(100vh - 60px);
+  background-size: cover;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 
   &__border {
     padding: 2% 0;
-    background: rgba(42, 71, 110, 0.918);
     width: 100%;
+    background-color: grey;
+    opacity: 0.9;
+    margin-top: 8%;
   }
   &__title {
     font-family: $base-font-family;
-    margin: 0 5%;
-    margin-bottom: 10px;
-    color: rgb(212, 212, 212);
+    margin: 2% 5% 3% 5%;
+    color: #292828;
     @media (max-width: $mobile-screen) {
       font-size: 20px;
     }
   }
 
   &__form {
-    margin: 0 5%;
+    margin: 0 5% 4%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -30,9 +36,9 @@
 
   &_field {
     width: 50%;
-    margin: 2px 0;
+    margin: 4px 0;
     height: 5%;
-    padding: 12px 20px;
+    padding: 16px 20px;
     background-color: white;
     border: none;
     border-radius: 5px;
@@ -40,7 +46,7 @@
     &_error {
       width: 50%;
       border-radius: 5px;
-      color: rgb(235, 146, 146);
+      color: rgb(167, 20, 20);
       font-family: $title-font-family;
       font-size: 15px;
       font-weight: bold;
@@ -71,18 +77,6 @@
     }
   }
 }
-
-// input[type="text"],
-// input[type="email"],
-// .contact-section__message {
-//   width: 50%;
-//   height: 5%;
-//   padding: 12px 20px;
-//   margin: 1% 0;
-//   background-color: white;
-//   border: none;
-//   border-radius: 5px;
-// }
 
 input::placeholder,
 textarea::placeholder {

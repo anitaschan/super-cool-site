@@ -1,7 +1,12 @@
 @import "../styles/typography";
-
+.background {
+  background-image: url("../../assets/blogbackground.jpg");
+  opacity: 0.8;
+  background-size: cover;
+  height: 100vh;
+}
 .container {
-  height: 75vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -20,5 +25,7 @@
     text-align: center;
     font-family: $base-font-family;
     font-size: 35px;
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
   }
 }

@@ -1,0 +1,24 @@
+@import "../styles/typography";
+
+.container {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.placeholder {
+  &-logo {
+    margin: auto;
+    background-image: url("../../assets/TeaLogo.svg");
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+  }
+
+  &-text {
+    text-align: center;
+    font-family: $base-font-family;
+    font-size: 35px;
+  }
+}

@@ -1,0 +1,27 @@
+@import "../styles/typography";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  // width: 400px;
+  border-radius: 5%;
+  &-image {
+    max-width: 400px;
+  }
+  &-titlebox {
+    background: lightgrey;
+    font-family: $base-font-family;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    font-weight: bold;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    max-width: 400px;
+  }
+  &-paragraph {
+    font-weight: normal;
+    font-size: 16px;
+  }
+}

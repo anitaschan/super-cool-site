@@ -1,0 +1,20 @@
+[
+  {
+    "image": "./White-Stuff.c1ac5857.jpg",
+    "name": "White Stuff",
+    "desc": "Client project whereby I worked as a front end developer enhancing web capabilities.",
+    "alt": "White Stuff Logo"
+  },
+  {
+    "image": "./FEM.3d72d50e.png",
+    "name": "Front End Masters: Intro to React v4",
+    "desc": "Intro to React course by Brian Holt. A course which helped me to further understand some basic knowledge of React",
+    "alt": "Petfinder App listing all pets and a search page"
+  },
+  {
+    "image": "./SentimentAnalysis.81c98146.png",
+    "name": "Research and Analysis of social media data in real time",
+    "desc": "Final year project done as part of Undergraduate degree, looking into analysing social media data ",
+    "alt": "Analaysed data collected from twitter about Brexit, showing if its negative or positive"
+  }
+]

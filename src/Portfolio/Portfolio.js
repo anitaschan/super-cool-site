@@ -5,11 +5,9 @@ import "./Portfolio.scss";
 import portfolioData from "./portfolioData.json";
 import whitestuffLogo from "../../assets/White-Stuff.jpg";
 import FEMpic from "../../assets/FEM.png";
-import sentimentpic from "../../assets/SentimentAnalysis.png"
- 
+import sentimentpic from "../../assets/SentimentAnalysis.png";
+
 const Portfolio = () => {
-  // const portfolioData = require("./portfolioData.json");
-  // console.log(portfolioData);
   return (
     <div className="portfolio">
       {portfolioData.map(items => (

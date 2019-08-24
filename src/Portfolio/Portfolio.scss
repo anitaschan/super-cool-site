@@ -1,0 +1,11 @@
+.portfolio {
+  background-image: url(../../assets/Portfolio.jpg);
+  height: 100%;
+  background-size: cover;
+  opacity: 0.8;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 10px 15px;
+  padding: 2rem;
+}

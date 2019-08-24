@@ -7,8 +7,7 @@ import whitestuffLogo from "../../assets/White-Stuff.jpg";
 import FEMpic from "../../assets/FEM.png";
 import sentimentpic from "../../assets/SentimentAnalysis.png";
 
-const Portfolio = () => {
-  return (
+const Portfolio = () => (
     <div className="portfolio">
       {portfolioData.map(items => (
         <Card
@@ -21,6 +20,5 @@ const Portfolio = () => {
       ))}
     </div>
   );
-};
 
 export default Portfolio;

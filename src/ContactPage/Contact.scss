@@ -2,26 +2,26 @@
 @import "../styles/layout";
 
 .contact-section {
-  background-image: url(../../assets/letters.jpg);
-  
-  
+  background-image: url(../../assets/contactme.jpg);
   height:calc(100vh - 60px);
   background-size: cover;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content: center; 
+  
 
   &__border {
     padding: 2% 0;
     width: 100%;
     background-color: grey;
     opacity: 0.9;
-    margin-top: 8%;
   }
   &__title {
     font-family: $base-font-family;
-    margin: 2% 5% 3% 5%;
+    margin: 2% 5%;
     color: #292828;
+    font-size: 45px;
     @media (max-width: $mobile-screen) {
       font-size: 20px;
     }
@@ -42,6 +42,9 @@
     background-color: white;
     border: none;
     border-radius: 5px;
+    @media (max-width: $mobile-screen) {
+      width: 100%;
+    }
 
     &_error {
       width: 50%;
@@ -54,6 +57,9 @@
       padding-left: 5px;
       @media (max-width: $mobile-screen) {
         font-size: 13px;
+        width: 100%;
+        margin-bottom: 10px;
+        line-height: 25px;
       }
     }
   }

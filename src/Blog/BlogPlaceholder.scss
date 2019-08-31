@@ -1,19 +1,15 @@
 @import "../styles/typography";
+@import "../styles/layout";
 .blog-section {
   background-image: url("../../assets/blogbackground.jpg");
   opacity: 0.75;
   background-size: cover;
-  height: 100vh;
+  height: calc( 100vh - 60px );
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  &-logo {
-    margin: 0 auto;
-    background-size: cover;
-    height: 550px;
-    width: 550px;
-  }
+  
 
   &-text {
     text-align: center;
@@ -24,100 +20,11 @@
     animation-delay: 4s;
     animation-duration: 4s;
     padding: 13px;
-    background-color: grey;
-  }
-}
+    background-color: #455357;
+    opacity: 0.9;
 
-#Logo {
-  transform: translate(112px, 117px);
-}
-
-#oval-2 {
-  cx: 162px;
-  cy: 162px;
-  r: 162px;
-
-  animation-name: oval2;
-  animation-delay: 1s;
-  animation-duration: 4s;
-}
-
-@keyframes oval2 {
-  0%,
-  100% {
-    r: 162px;
-  }
-  50% {
-    r: 208px;
-  }
-}
-
-#oval {
-  cx: 162.5px;
-  cy: 162.5px;
-  r: 148.5px;
-  animation-name: oval;
-  animation-delay: 1s;
-  animation-duration: 4s;
-}
-
-@keyframes oval {
-  0%,
-  100% {
-    r: 148.5px;
-  }
-  50% {
-    r: 188px;
-  }
-}
-
-#japanese-teapot {
-  transform: translate(129px, 135px) rotate(-30deg);
-  fill: #ffffff;
-  fill-rule: nonzero;
-
-  animation-name: teapot;
-  animation-delay: 1s;
-  animation-duration: 4s;
-  // animation-iteration-count: infinite;
-}
-@keyframes teapot {
-  0% {
-    transform: translate(129px, 135px) rotate(-30deg);
-  }
-  50% {
-    transform: translate(129px, 135px) rotate(-60deg);
-  }
-  100% {
-    transform: translate(129px, 135px) rotate(-30deg);
-    animation-delay: 2s;
-  }
-}
-
-#teapot {
-  transform: translate(0, 36.4px);
-}
-
-#sake {
-  transform: translate(121px, 196px);
-}
-
-#Steam {
-  visibility: hidden;
-  animation-delay: 5s;
-  animation-name: steam;
-  animation-timing-function: ease-in-out;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes steam {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-    visibility: visible;
+    @media (max-width: $mobile-screen) {
+      font-size: 20px;
+    }
   }
 }

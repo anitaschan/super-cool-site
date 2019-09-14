@@ -1,0 +1,30 @@
+@import "../styles/typography";
+@import "../styles/layout";
+.blog-section {
+  background-image: url("../../assets/blogbackground.jpg");
+  opacity: 0.75;
+  background-size: cover;
+  height: calc( 100vh - 60px );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  
+
+  &-text {
+    text-align: center;
+    font-family: $base-font-family;
+    font-size: 35px;
+    color: white;
+    animation-name: text;
+    animation-delay: 4s;
+    animation-duration: 4s;
+    padding: 13px;
+    background-color: #455357;
+    opacity: 0.9;
+
+    @media (max-width: $mobile-screen) {
+      font-size: 20px;
+    }
+  }
+}

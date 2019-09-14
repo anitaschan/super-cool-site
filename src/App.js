@@ -5,6 +5,7 @@ import NavBar from "./HomePage/NavBar/NavBar";
 import HomePage from "./HomePage/HomePage";
 import "./App.scss";
 import Contact from "./ContactPage/Contact";
+import BlogPlaceholder from "./Blog/BlogPlaceholder";
 import Portfolio from "./Portfolio/Portfolio";
 
 class App extends React.Component {
@@ -15,6 +16,7 @@ class App extends React.Component {
         <Switch>
           <Route exact strict path="/" component={HomePage} />
           <Route path="/contact" component={Contact} />
+          <Route path="/blog" component={BlogPlaceholder} />
           <Route path="/portfolio" component={Portfolio} />
         </Switch>
       </Router>

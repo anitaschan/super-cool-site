@@ -8,7 +8,7 @@
     "format:check": "prettier --list-different \"/src/**/*.{js, jsx, css, json} \" ",
     "lint": "eslint \"**/*.{js,jsx}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel src/index.html"
+    "build": "parcel index.html"
   },
   "keywords": [],
   "author": "",

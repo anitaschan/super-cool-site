@@ -28,7 +28,8 @@ class Contact extends React.Component {
     );
 
     const { name, value } = event.target;
-    let errors = this.state.errors;
+    let errors = { ...this.state.errors };
+    let form = { ...this.state.form };
 
     switch (name) {
       case "fullName":
@@ -47,9 +48,16 @@ class Contact extends React.Component {
       default:
         break;
     }
-    let form = { ...this.state.form };
-    form[event.target.name] = event.target.value;
-    this.setState({ form: form });
+
+    this.setState({
+      form: {
+        ...form,
+        [event.target.name]: event.target.value
+      },
+      errors: {
+        ...errors
+      }
+    });
   };
 
   formCanBeSubmitted = () => {
@@ -76,6 +84,7 @@ class Contact extends React.Component {
 
   render() {
     const formCanBeSubmitted = this.formCanBeSubmitted();
+    const { fullName, _replyto, subject, message } = this.state.form;
     return (
       <div className="contact-section">
         <div className="contact-section__border">
@@ -92,6 +101,7 @@ class Contact extends React.Component {
               placeholder="Name"
               maxLength="20"
               autoComplete="off"
+              value={fullName}
               onChange={this.handleChange}
             />
             <div className="contact-section_field_error">
@@ -103,6 +113,7 @@ class Contact extends React.Component {
               name="_replyto"
               placeholder="Email"
               autoComplete="off"
+              value={_replyto}
               onChange={this.handleChange}
             />
             <div className="contact-section_field_error">
@@ -113,6 +124,7 @@ class Contact extends React.Component {
               type="text"
               name="subject"
               placeholder="Subject"
+              value={subject}
               autoComplete="off"
               onChange={this.handleChange}
             />
@@ -124,6 +136,7 @@ class Contact extends React.Component {
               placeholder="Message"
               name="message"
               autoComplete="off"
+              value={message}
               onChange={this.handleChange}
             />
             <div className="contact-section_field_error">

@@ -10,7 +10,7 @@
     "lint": "eslint \"**/*.{js,jsx}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "parcel index.html",
-    "predeploy": "yarn run build",
+    "predeploy": "npm run build",
    "deploy": "gh-pages -d build"
   },
   "keywords": [],
